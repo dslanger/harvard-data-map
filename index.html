@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcel Sandbox</title>
+    <title>Harvard Data Map</title>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
   </head>
 
   <body>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column is-12-tablet">
+            <div class="map"></div>
+            <form action="" id="yearOptionsForm">
+              <div class="control" id="yearOptions">
+                <label class="radio">
+                  <input
+                    type="radio"
+                    name="year"
+                    value="2017"
+                    id="2017"
+                    class="year-option"
+                    checked
+                  />
+                  2017
+                </label>
+                <label class="radio">
+                  <input
+                    type="radio"
+                    name="year"
+                    value="2014"
+                    id="2014"
+                    class="year-option"
+                  />
+                  2014
+                </label>
+                <label class="radio">
+                  <input
+                    type="radio"
+                    name="year"
+                    value="2011"
+                    id="2011"
+                    class="year-option"
+                  />
+                  2011
+                </label>
+                <label class="radio">
+                  <input
+                    type="radio"
+                    name="year"
+                    value="2008"
+                    id="2008"
+                    class="year-option"
+                  />
+                  2008
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="src/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,78 @@
+body {
+  font-family: sans-serif;
+}
+
+$red-one: #ff9999;
+$red-two: #ff6666;
+$red-three: #ff3333;
+$red-four: #ff0000;
+$red-five: #cc0000;
+
+.map {
+  transition: all ease 333ms;
+  &:not(.is-active) {
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+  &.is-active {
+    width: 65%;
+    min-width: 375px;
+    max-width: 700px;
+    margin: 0 auto;
+
+    path {
+      transition: fill ease 750ms;
+      cursor: pointer;
+      &:hover {
+        fill: skyblue;
+      }
+    }
+
+    [data-zone="1"] {
+      fill: $red-one;
+    }
+
+    [data-zone="2"] {
+      fill: $red-two;
+    }
+
+    [data-zone="3"] {
+      fill: $red-three;
+    }
+
+    [data-zone="4"] {
+      fill: $red-four;
+    }
+
+    [data-zone="5"] {
+      fill: $red-five;
+    }
+
+    [data-zone="0"] {
+      fill: inherit;
+    }
+
+    // .zone-one {
+    //   fill: $red-one;
+    // }
+
+    // .zone-two {
+    //   fill: $red-two;
+    // }
+
+    // .zone-three {
+    //   fill: $red-three;
+    // }
+
+    // .zone-four {
+    //   fill: $red-four;
+    // }
+
+    // .zone-five {
+    //   fill: $red-five;
+    // }
+  }
+}
+
