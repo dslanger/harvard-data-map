@@ -26,10 +26,8 @@ const getZone = (year) => {
   }
 };
 
-let year;
-
 const yearOptions = document.getElementsByClassName("year-option");
-const updateData = () => {
+const updateData = (year = "2017") => {
   for (var i = 0; i < yearOptions.length; i++) {
     if (yearOptions[i].checked) {
       year = yearOptions[i].value;
@@ -52,10 +50,4 @@ map.innerHTML = mapGraphic;
 
 shrinkMap(map);
 
-updateData("2017");
-
-// stateData.forEach((state) => {
-//   const path = document.getElementById(state.ID);
-//   path.setAttribute("data-year", state[year]);
-//   path.classList.add(getYearClass(state[year]));
-// });
+updateData();

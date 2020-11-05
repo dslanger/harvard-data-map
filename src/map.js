@@ -5,7 +5,6 @@ const mapSVG = `
 <defs>
   <style type="text/css">
 
-
 .state {fill: #525352;}
 
 
