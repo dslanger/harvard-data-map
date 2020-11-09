@@ -2,6 +2,11 @@ body {
   font-family: sans-serif;
 }
 
+h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
 $red-one: #ff9999;
 $red-two: #ff6666;
 $red-three: #ff3333;
@@ -17,17 +22,30 @@ $red-five: #cc0000;
     }
   }
   &.is-active {
-    width: 65%;
+    width: 75%;
     min-width: 375px;
-    max-width: 700px;
+    max-width: 1000px;
     margin: 0 auto;
 
     path {
-      transition: fill ease 750ms;
+      transition: fill ease 500ms;
       cursor: pointer;
-      &:hover {
-        fill: skyblue;
+      &:hover, 
+      &.active {
+        fill: lightgreen;
       }
+    }
+    .year-options {
+      display: block !important;
+      margin-bottom: 3rem;
+    }
+    
+    .state-content {
+      display: block !important;
+    }
+    
+    .state-content.is-visible {
+      display: block !important;
     }
 
     [data-zone="1"] {
@@ -53,26 +71,15 @@ $red-five: #cc0000;
     [data-zone="0"] {
       fill: inherit;
     }
+  }
+}
 
-    // .zone-one {
-    //   fill: $red-one;
-    // }
-
-    // .zone-two {
-    //   fill: $red-two;
-    // }
-
-    // .zone-three {
-    //   fill: $red-three;
-    // }
-
-    // .zone-four {
-    //   fill: $red-four;
-    // }
-
-    // .zone-five {
-    //   fill: $red-five;
-    // }
+.tooltip-content {
+  padding: .5rem;
+  span {
+    display: block;
+    margin-bottom: .75rem;
+    line-height: 1;
   }
 }
 
