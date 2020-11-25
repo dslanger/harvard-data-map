@@ -7,6 +7,10 @@ h2 {
   color: #333;
 }
 
+*:focus {
+  outline: none;
+}
+
 $red-one: #ff9999;
 $red-two: #ff6666;
 $red-three: #ff3333;
