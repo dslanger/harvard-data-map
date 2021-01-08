@@ -12,6 +12,7 @@
     "d3": "6.2.0",
     "d3-scale": "3.2.3",
     "d3-scale-chromatic": "2.0.0",
+    "highcharts": "8.2.2",
     "tippy.js": "6.2.7"
   },
   "devDependencies": {

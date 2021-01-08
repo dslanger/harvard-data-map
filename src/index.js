@@ -2,14 +2,10 @@ import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css"; // optional for styling
 import "tippy.js/themes/light.css";
 import "./styles.scss";
-import stateCharts from "./stateCharts.js";
-// import * as d3 from "d3";
+import { chartOne, chartTwo } from "./stateCharts.js";
 
 const stateTitle = document.getElementById("state-title");
 const stateContent = document.getElementById("state-content");
-// const map = document.querySelector(".map");
-
-stateCharts();
 
 const getClosest = function (elem, selector) {
   // Element.matches() polyfill
@@ -79,9 +75,7 @@ tippy("[data-state]", {
 
 const handleHashChange = () => {
   const stateID = window.location.hash.replace("#", "", "g"); //KS
-  // console.log(stateID);
   const state = document.getElementById(stateID);
-  // console.log(state.dataset.state);
   stateContent.classList.remove("is-visible");
   stateTitle.innerHTML = `<strong>${state.dataset.state}</strong>`;
   stateContent.classList.add("is-visible");
@@ -95,7 +89,8 @@ if (window.location.hash) {
   console.log(`no hash yet, keep cool`);
 }
 window.onhashchange = handleHashChange;
-
 (() => {
   initMap();
+  chartOne();
+  chartTwo();
 })();
