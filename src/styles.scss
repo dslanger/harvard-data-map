@@ -10,76 +10,65 @@ h2 {
 *:focus {
   outline: none;
 }
-
-$red-one: #ff9999;
-$red-two: #ff6666;
-$red-three: #ff3333;
-$red-four: #ff0000;
-$red-five: #cc0000;
+$red: #dd0078;
+$red-one: lighten($red, 30%);
+$red-two: lighten($red, 15%);
+$red-three: $red;
+$red-four: darken($red, 15%);
+$red-five: darken($red, 30%);
 
 .map {
-  transition: all ease 333ms;
-  &:not(.is-active) {
-    &:hover {
-      cursor: pointer;
-      opacity: 0.8;
-    }
-  }
-  &.is-active {
-    width: 75%;
-    min-width: 375px;
-    max-width: 1000px;
-    margin: 0 auto;
 
-    path {
-      transition: fill ease 500ms;
+    .state {
+      transition: fill ease 200ms;
       cursor: pointer;
       &:hover, 
       &.active {
-        fill: lightgreen;
+        fill: skyblue;
       }
-    }
-    .year-options {
-      display: block !important;
-      margin-bottom: 3rem;
-    }
-    
-    .state-content {
-      display: block !important;
     }
     
     .state-content.is-visible {
       display: block !important;
     }
 
-    [data-zone="1"] {
+    [data-heat="1"] {
       fill: $red-one;
     }
 
-    [data-zone="2"] {
+    [data-heat="2"] {
       fill: $red-two;
     }
 
-    [data-zone="3"] {
+    [data-heat="3"] {
       fill: $red-three;
     }
 
-    [data-zone="4"] {
+    [data-heat="4"] {
       fill: $red-four;
     }
 
-    [data-zone="5"] {
+    [data-heat="5"] {
       fill: $red-five;
     }
 
-    [data-zone="0"] {
+    [data-heat="0"] {
       fill: inherit;
     }
-  }
 }
 
 .tooltip-content {
   padding: .5rem;
+  h4 {
+    font-weight: bold;
+    font-size: 1.15rem;
+    margin-bottom: .25rem;
+  }
+  small {
+    line-height: 1.25;
+    display: block;
+    margin-bottom: .5rem;
+  }
   span {
     display: block;
     margin-bottom: .75rem;
